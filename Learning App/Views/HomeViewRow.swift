@@ -17,7 +17,7 @@ struct HomeViewRow: View {
     
     var body: some View {
         
-       
+        
         ZStack {
             
             Rectangle()
@@ -41,12 +41,12 @@ struct HomeViewRow: View {
                     
                     // Headline
                     Text(title)
-                   
+                    
                     // Description
                     Text(description)
                         .padding(.bottom, 20)
                         .font(.caption)
-                   
+                    
                     // Icons
                     HStack {
                         
@@ -57,7 +57,7 @@ struct HomeViewRow: View {
                         Text(count)
                             .font(Font.system(size: 10))
                         
-                       
+                        
                         
                         // Time
                         Image(systemName: "clock")
