@@ -38,10 +38,7 @@ struct ContentDetailView: View {
                     
                     ZStack {
                         
-                        Rectangle()
-                            .foregroundColor(Color.green)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
+                        RectangleCard(color: Color.green)
                             .frame(height: 48)
                         
                         
@@ -51,6 +48,27 @@ struct ContentDetailView: View {
                     }
                 })
                 
+                
+            }
+            else {
+                
+                // Show the complete button instead
+                Button(action: {
+                    
+                    model.currentContentSelected = nil
+                    
+                }, label: {
+                    
+                    ZStack {
+                        
+                        RectangleCard(color: Color.green)
+                            .frame(height: 48)
+                        
+                        Text("Complete")
+                            .bold()
+                            .foregroundColor(Color.white)
+                    }
+                })
                 
             }
         }
